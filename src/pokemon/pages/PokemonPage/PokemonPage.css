@@ -1,0 +1,21 @@
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: "Roboto Flex Variable", sans-serif;
+  color: #316bb3;
+  font-size: 1.5rem;
+  gap: 30px;
+}
+
+.pokedex__header {
+  width: 100%;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid #316bb3;
+  border-bottom: 2px solid #316bb3;
+}

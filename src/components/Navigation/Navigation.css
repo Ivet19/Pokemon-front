@@ -2,12 +2,6 @@
   align-self: flex-start;
 }
 
-.navigation-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .navigation-link {
   text-decoration: none;
   padding: 4px 10px;
