@@ -1,14 +1,21 @@
 .main-header {
+  font-family: "Fusion Pixel 10px Proportional JP", sans-serif;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 30px;
+  gap: 20px;
   background-image: linear-gradient(#316bb3, #a9ecf7);
 }
 
+.title-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .main-header__title {
-  font-family: "Fusion Pixel 10px Proportional JP", sans-serif;
   margin: 0;
   font-size: 2.4rem;
   color: #ffcb03;

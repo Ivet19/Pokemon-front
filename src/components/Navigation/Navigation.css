@@ -1,0 +1,27 @@
+.navigation-container {
+  align-self: flex-start;
+}
+
+.navigation-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link {
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  color: #316bb3;
+  text-shadow: 3px 2px 0px #ffcb03;
+  background-color: #edfbfb55;
+
+  &:hover {
+    background-color: #edfbfbc5;
+  }
+}
+
+.active {
+  background-color: #edfbfbb7;
+}
