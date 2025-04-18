@@ -1,15 +1,17 @@
 import { Pokemon } from "../types";
 import { PokemonDto } from "./types";
 
-export const mapPokemonsDtoToPokemons = (
-  pokemonsDto: PokemonDto[],
-): Pokemon[] => {
-  const pokemons = pokemonsDto.map<Pokemon>(({ name, ...pokemonDto }) => ({
+export const mapPokemonDtoToPokemon = (
+  pokemonDto: PokemonDto,
+  types: { type: { name: string } }[],
+  pokedexPosition: string,
+): Pokemon => {
+  const pokemon = {
     ...pokemonDto,
-    name,
-    imageAlt: `front view of the ${name} pokemon`,
-    type: [],
-  }));
+    pokedexPosition: pokedexPosition,
+    imageAlt: `front view of the ${pokemonDto.name} pokemon`,
+    types: types,
+  };
 
-  return pokemons;
+  return pokemon;
 };

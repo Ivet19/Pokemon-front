@@ -5,5 +5,5 @@ export type Pokemon = {
   imageUrl: string;
   imageAlt: string;
   isCaptured: boolean;
-  type: [];
+  types: { type: { name: string } }[];
 };
