@@ -1,9 +1,7 @@
-export type Pokemon = {
+export interface PokemonDto {
   id: string;
   name: string;
   pokedexPosition: string;
   imageUrl: string;
-  imageAlt: string;
   isCaptured: boolean;
-  types: { type: { name: string } }[];
-};
+}
