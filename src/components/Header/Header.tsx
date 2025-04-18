@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <div className="header-container">
       <header className="main-header">
         <div className="title-container">
-          <img src="pokemon.svg" alt="Pokémon" />
+          <img src="pokemon.svg" alt="Pokémon" width={200} height={74} />
           <h1 className="main-header__title">Pokedex</h1>
         </div>
         <Navigation />
