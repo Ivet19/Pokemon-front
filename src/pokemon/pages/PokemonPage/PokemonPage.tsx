@@ -16,7 +16,7 @@ const PokemonPage: React.FC = () => {
     <main className="pokedex">
       <header className="pokedex__header">
         <div className="pokedex-title-container">
-          <img src="pokedex.webp" alt="pokedex icon" width={55} height={82.5} />
+          <img src="pokedex.webp" alt="pokedex icon" width={70} height={98} />
           <h2 className="pokedex__title">Pokémon in pokedex</h2>
         </div>
         <span className="pokedex__counter">{`Total: ${pokemonsTotal}`}</span>
