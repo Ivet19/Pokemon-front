@@ -5,11 +5,14 @@ import AppRouter from "./router/AppRouter";
 import "@fontsource/fusion-pixel-10px-proportional-jp/index.css";
 import "@fontsource-variable/roboto-flex/index.css";
 import "./styles/styles.css";
+import PokemonContextProvider from "./pokemon/context/PokemonContextProvider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <AppRouter />
+      <PokemonContextProvider>
+        <AppRouter />
+      </PokemonContextProvider>
     </BrowserRouter>
   </StrictMode>,
 );
