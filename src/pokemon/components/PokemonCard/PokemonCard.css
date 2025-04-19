@@ -3,6 +3,7 @@
   font-family: "Fusion Pixel 10px Proportional JP", sans-serif;
   border: 2px solid #316bb3;
   border-radius: 8px;
+  box-shadow: 8px 4px 4px #685101;
   padding: 20px 10px;
   gap: 15px;
   display: flex;
@@ -14,8 +15,8 @@
 
 .pokemon__position {
   position: absolute;
-  top: 10px;
-  left: 20px;
+  top: 5px;
+  left: 15px;
   font-size: 1.8rem;
 }
 
@@ -33,13 +34,13 @@
 .pokemon__name {
   font-family: "Roboto Flex Variable", sans-serif;
   justify-self: center;
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   padding: 10px;
 }
 
 .pokemon__types {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 1.8rem;
 }
 
@@ -64,8 +65,8 @@
 }
 
 .pokemon__type--flying {
-  background-color: #80b8ef;
-  color: #fff;
+  background-color: #64affa;
+  color: #1d2b5d;
 }
 
 .pokemon__type--water {
