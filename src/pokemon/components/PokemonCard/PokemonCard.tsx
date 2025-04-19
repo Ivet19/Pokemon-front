@@ -25,7 +25,7 @@ const PokemonCard: React.FC<PokecardProps> = ({
           {types.map((type) => (
             <span
               key={type.type.name}
-              className={`pokemon__type pokemon__type--${type}`}
+              className={`pokemon__type pokemon__type--${type.type.name}`}
             >
               {type.type.name}
             </span>
