@@ -15,8 +15,8 @@
 
 .pokemon__position {
   position: absolute;
-  top: 10px;
-  left: 20px;
+  top: 5px;
+  left: 15px;
   font-size: 1.8rem;
 }
 
