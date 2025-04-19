@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 30px;
+  padding: 30px;
   gap: 40px;
-  font-family: "Fusion Pixel 10px Proportional JP", sans-serif;
+  font-family: "Roboto Flex Variable", sans-serif;
 }
 
 .error-container {
@@ -14,9 +14,15 @@
 }
 
 .error-code {
+  font-family: "Fusion Pixel 10px Proportional JP", sans-serif;
   font-size: 3rem;
+  color: #316bb3;
 }
 
 .error-message {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  padding: 8px;
+  border-radius: 5px;
+  color: #316bb3;
+  background-color: #ffcd03ba;
 }

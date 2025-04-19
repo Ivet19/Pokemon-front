@@ -5,7 +5,7 @@ const NotFoundPage: React.FC = () => {
     <main className="principal-container">
       <div className="error-container">
         <h1 className="error-code">404</h1>
-        <p className="error-message">Page not found</p>
+        <h2 className="error-message">Page not found</h2>
       </div>
       <img
         src="404_pikachu.png"

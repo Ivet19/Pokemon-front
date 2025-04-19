@@ -1,0 +1,44 @@
+.pokemon {
+  background-color: #ffcd03ba;
+  font-family: "Fusion Pixel 10px Proportional JP", sans-serif;
+  border: 2px solid #316bb3;
+  border-radius: 8px;
+  padding: 20px 10px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pokemon__position {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 1.8rem;
+}
+
+.pokemon__image {
+  justify-self: center;
+  border: 2px solid #316bb3;
+  border-radius: 50%;
+  background-color: #a8edf79b;
+}
+
+.pokemon__data {
+  width: 100%;
+}
+
+.pokemon__name {
+  font-family: "Roboto Flex Variable", sans-serif;
+  justify-self: center;
+  font-size: 2.1rem;
+  gap: 10px;
+}
+
+.pokemon__types {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.8rem;
+}
