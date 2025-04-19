@@ -27,7 +27,7 @@
 }
 
 .pokedex__title {
-  text-shadow: 3px 2px 0px #ffcb03;
+  font-size: 2rem;
 }
 
 .pokedex__counter {
