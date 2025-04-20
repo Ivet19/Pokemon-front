@@ -14,6 +14,7 @@ describe("Given the Pokecard component", () => {
                 id: "123456",
                 name: "Riolu",
                 types: [{ type: { name: "fighting" } }],
+                abilities: [{ ability: { name: "punch" } }],
                 pokedexPosition: "447",
                 imageUrl:
                   "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/447.png",
@@ -39,6 +40,7 @@ describe("Given the Pokecard component", () => {
                 id: "123456",
                 name: "Riolu",
                 types: [{ type: { name: "fighting" } }],
+                abilities: [{ ability: { name: "punch" } }],
                 pokedexPosition: "447",
                 imageUrl:
                   "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/447.png",

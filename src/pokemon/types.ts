@@ -6,4 +6,10 @@ export type Pokemon = {
   imageAlt: string;
   isCaptured: boolean;
   types: { type: { name: string } }[];
+  abilities: { ability: { name: string } }[];
 };
+
+export type PokemonData = Omit<
+  Pokemon,
+  "id" | "imageAlt" | "types" | "abilities" | "isCaptured"
+>;

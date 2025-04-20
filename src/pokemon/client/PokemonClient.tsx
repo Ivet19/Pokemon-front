@@ -1,4 +1,4 @@
-import { Pokemon } from "../types";
+import { Pokemon, PokemonData } from "../types";
 import { PokemonDto } from "../dto/types";
 import { PokemonsClientStructure } from "./types";
 import { mapPokemonDtoToPokemon } from "../dto/mappers";
@@ -14,12 +14,14 @@ class PokemonClient implements PokemonsClientStructure {
 
     const pokemonProperties = (await response.json()) as {
       types: { type: { name: string } }[];
+      abilities: { ability: { name: string } }[];
       id: number;
     };
 
     const pokemon = mapPokemonDtoToPokemon(
       currentPokemon,
       pokemonProperties.types,
+      pokemonProperties.abilities,
       pokemonProperties.id.toString(),
     );
 
@@ -50,6 +52,26 @@ class PokemonClient implements PokemonsClientStructure {
 
     return resultPokemons;
   };
+
+  public async addPokemon(pokemonData: PokemonData): Promise<Pokemon> {
+    const apiUrl = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${apiUrl}/pokemon`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(pokemonData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Error creating pokemon");
+    }
+
+    const newPokemon = (await response.json()) as PokemonDto;
+
+    const pokemon = this.getFulledPokemon(newPokemon);
+
+    return pokemon;
+  }
 }
 
 export default PokemonClient;
