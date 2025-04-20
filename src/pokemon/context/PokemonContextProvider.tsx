@@ -21,10 +21,19 @@ const PokemonContextProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setPokemons((pokemons) => [...pokemons, newPokemon]);
   };
 
+  const removePokemonById = async (pokemonId: string): Promise<void> => {
+    const removePokemon = await pokemonClient.deletePokemon(pokemonId);
+
+    setPokemons((pokemons) =>
+      pokemons.filter((pokemon) => pokemon.id !== removePokemon.id),
+    );
+  };
+
   const pokemonContextValue: PokemonContextStructure = {
     pokemons,
     loadPokemons,
     createPokemon,
+    removePokemonById,
   };
 
   return (

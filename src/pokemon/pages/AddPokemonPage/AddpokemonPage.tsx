@@ -9,7 +9,7 @@ const AddPokemonPage: React.FC = () => {
     <main className="main">
       <div className="form-container">
         <header className="add-pokemon-header">
-          <h2 className="main-title">Add a new pokemon</h2>
+          <h2 className="main-title">Add a new pokémon</h2>
         </header>
         <PokemonForm action={createPokemon} />
       </div>

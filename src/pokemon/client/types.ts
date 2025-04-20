@@ -5,4 +5,5 @@ import { Pokemon } from "../types";
 export interface PokemonsClientStructure {
   getPokemons: () => Promise<PokemonDto[]>;
   addPokemon: (pokemonData: PokemonData) => Promise<Pokemon>;
+  deletePokemon: (pokemonId: string) => Promise<PokemonDto>;
 }
