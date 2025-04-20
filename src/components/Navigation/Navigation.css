@@ -1,12 +1,16 @@
 .navigation-container {
   align-self: flex-start;
+
+  @media (width < 500px) {
+    align-self: center;
+  }
 }
 
 .navigation-link {
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 8px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #316bb3;
   text-shadow: 3px 2px 0px #ffcb03;
   background-color: #edfbfb55;
