@@ -30,3 +30,9 @@ li {
   padding: 0;
   margin: 0;
 }
+
+button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
