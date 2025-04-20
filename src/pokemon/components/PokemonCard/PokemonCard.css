@@ -20,6 +20,19 @@
   font-size: 1.8rem;
 }
 
+.pokemon__delete-button {
+  padding: 10px;
+  position: absolute;
+  background: transparent;
+  top: 7px;
+  right: 10px;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: #ffffff90;
+  }
+}
+
 .pokemon__image {
   justify-self: center;
   border: 2px solid #316bb3;
