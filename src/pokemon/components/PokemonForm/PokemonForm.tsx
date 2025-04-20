@@ -52,7 +52,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
     <>
       <form className="pokemon-form" onSubmit={onSubmitForm}>
         <h3 className="pokemon-form__instructions">
-          Please fill out the following form to add a new pokemon:
+          Please fill out the following form to add a new pokémon:
         </h3>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -93,7 +93,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
           type="submit"
           disabled={!isFormValid}
         >
-          Add pokemon
+          Add pokémon
         </button>
       </form>
     </>
