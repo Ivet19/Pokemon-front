@@ -72,6 +72,21 @@ class PokemonClient implements PokemonsClientStructure {
 
     return pokemon;
   }
+
+  public async deletePokemon(pokemonId: string): Promise<PokemonDto> {
+    const response = await fetch(`${this.apiUrl}/pokemon/${pokemonId}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (!response.ok) {
+      throw new Error("Error deleting pokemon");
+    }
+
+    const deletedPokemon = (await response.json()) as PokemonDto;
+
+    return deletedPokemon;
+  }
 }
 
 export default PokemonClient;
