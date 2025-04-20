@@ -32,14 +32,20 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
 
   const navigate = useNavigate();
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const onSubmitForm = async (
     event: React.FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     event.preventDefault();
+    setErrorMessage("");
 
-    await action(pokemonData);
-
-    navigate("/pokemon");
+    try {
+      await action(pokemonData);
+      navigate("/pokemon");
+    } catch {
+      setErrorMessage("This pokemon already exists or does not exist.");
+    }
   };
 
   return (
@@ -59,7 +65,6 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="imageUrl">Image URL:</label>
           <input
@@ -71,7 +76,6 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="pokedexPosition">Pokedex position:</label>
           <input
@@ -83,7 +87,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
             required
           />
         </div>
-
+        {errorMessage && <p className="form__error-message">{errorMessage}</p>}
         <button
           className="pokemon-form__button"
           type="submit"
