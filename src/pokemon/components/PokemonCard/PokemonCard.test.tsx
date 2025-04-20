@@ -56,5 +56,31 @@ describe("Given the Pokecard component", () => {
 
       expect(pokemonImage).toBeVisible();
     });
+
+    test("Then it should show a trash icon inside a button", () => {
+      render(
+        <MemoryRouter>
+          <PokemonContextProvider>
+            <PokemonCard
+              pokemon={{
+                id: "123456",
+                name: "Riolu",
+                types: [{ type: { name: "fighting" } }],
+                abilities: [{ ability: { name: "punch" } }],
+                pokedexPosition: "447",
+                imageUrl:
+                  "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/447.png",
+                imageAlt: "Front view of pokemon Riolu",
+                isCaptured: false,
+              }}
+            />
+          </PokemonContextProvider>
+        </MemoryRouter>,
+      );
+
+      const deleteButton = screen.getByAltText(/delete/i);
+
+      expect(deleteButton).toBeVisible();
+    });
   });
 });
